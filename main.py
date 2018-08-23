@@ -4,11 +4,11 @@ import sys
 app = Flask(__name__)
 def p(x):
     print(x, file=sys.stderr)
-    
+
 @app.route("/")
 def health():
     return "up"
-    
+
 @app.route('/<path:subpath>')
 def browse(subpath):
     p("going yay!!")
